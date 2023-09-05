@@ -64,22 +64,6 @@ let package = Package(
             name: "IdensicMobileSDK_VideoIdent",
             url: "\(gitUrl)/IdensicMobileSDK_VideoIdent-\(version).zip",
             checksum: checksums.vi
-        ),
-        .target(
-            name: "MRTDReaderWrapper",
-            dependencies: [
-                "IdensicMobileSDK_MRTDReader",
-                "OpenSSL"
-            ],
-            path: "MRTDReaderWrapper"
-        ),
-        .target(
-            name: "VideoIdentWrapper",
-            dependencies: [
-                "IdensicMobileSDK_VideoIdent",
-                .product(name: "TwilioVideo", package: "twilio-video-ios")
-            ],
-            path: "VideoIdentWrapper"
         )
     ]
 )
